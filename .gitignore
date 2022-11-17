@@ -1,0 +1,49 @@
+######################################################
+#################### .gitignore ######################
+######################################################
+
+
+##### BEGIN Project-Specific Files to .gitignore #####
+
+
+
+#####   END Project-Specific Files to .gitignore #####
+
+
+
+##########################
+### ANY SUBDIRECTORIES ###
+##########################
+
+## Intention: ignore packages, which should be re-installed on each deployment or dev build based on dependencies and versions listed in package.json and package-lock.json
+node_modules/
+
+## Intention: ignore any app secrets, intentionally stored in secrets/
+secrets/
+
+## Intention: ignore logging, intentionally stored in log/ or logs/
+log/
+logs/
+
+## Intention: ignore IDE-specific settings re: auto-deployment when build
+.vscode/
+
+###########################
+### IGNORE IN ROOT ONLY ###
+###########################
+## Intention: ignore build files, because they should be re-built anyway upon deployment for a specific environment
+/dist/
+/.local/
+
+############################
+### FILE PATTERN OR TYPE ###
+############################
+
+## Intention: ignore any .log files accidentally misplaced or thoughtlessly output in some lower directory, which may contain secrets
+*.log
+
+## Intention: ignore any .env files, which contain environment-specific values such as database passwords or API keys.
+.env
+*.env
+*.env.*
+!.env.example
