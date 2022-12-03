@@ -19,6 +19,7 @@
 node_modules/
 
 ## Intention: ignore any app secrets, intentionally stored in secrets/
+secret/
 secrets/
 
 ## Intention: ignore logging, intentionally stored in log/ or logs/
@@ -39,8 +40,13 @@ logs/
 ### FILE PATTERN OR TYPE ###
 ############################
 
+## Intention: ignore any app secrets stored in .secret files possibly used for testing; this is bad practice but pragmatically may happen on low-risk personal projects.
+*.secret
+*.secrets
+
 ## Intention: ignore any .log files accidentally misplaced or thoughtlessly output in some lower directory, which may contain secrets
 *.log
+*.logs
 
 ## Intention: ignore any .env files, which contain environment-specific values such as database passwords or API keys.
 .env
