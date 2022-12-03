@@ -2,6 +2,14 @@
 #################### .gitignore ######################
 ######################################################
 
+##############
+### v1.0.1 ###
+##############
+
+
+############################################
+############ PROJECT-SPECIFIC ##############
+############################################
 
 ##### BEGIN Project-Specific Files to .gitignore #####
 
@@ -11,9 +19,14 @@
 
 
 
-##########################
-### ANY SUBDIRECTORIES ###
-##########################
+
+##################################
+############ COMMON ##############
+##################################
+
+##############################
+### DIRECTORIES (ANYWHERE) ###
+##############################
 
 ## Intention: ignore packages, which should be re-installed on each deployment or dev build based on dependencies and versions listed in package.json and package-lock.json
 node_modules/
@@ -29,12 +42,15 @@ logs/
 ## Intention: ignore IDE-specific settings re: auto-deployment when build
 .vscode/
 
-###########################
-### IGNORE IN ROOT ONLY ###
-###########################
+
+#############################
+### DIRECTORIES (IN ROOT) ###
+#############################
+
 ## Intention: ignore build files, because they should be re-built anyway upon deployment for a specific environment
 /dist/
 /.local/
+
 
 ############################
 ### FILE PATTERN OR TYPE ###
